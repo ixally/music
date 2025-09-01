@@ -11,6 +11,15 @@ import asyncio
 import importlib
 import sys
 
+import os, time
+
+# Fix time desync di Heroku (Pyrogram BadMsgNotification error)
+os.environ["TZ"] = "UTC"
+try:
+    time.tzset()
+except Exception:
+    pass
+
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
