@@ -16,6 +16,8 @@ pykeyboard
 pyrogram==1.4.16
 python-dotenv
 pyyaml==5.3.1
+pytz
+tzdata
 requests
 speedtest-cli
 spotipy
